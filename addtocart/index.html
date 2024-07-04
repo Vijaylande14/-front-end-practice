@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Simple Shopping Cart</h2>
+        <div class="item" id="item1">
+            <img src="C:\Users\Admin\OneDrive\Desktop\javascript\practice\addtocart\images\png-transparent-fast-food-restaurant-hamburger-fast-food-restaurant-sweets-food-recipe-fast-food-restaurant-thumbnail.png" alt="Item 1">
+            <div class="details">
+                <h3>Item 1</h3>
+                <p class="price">₹100.00</p>
+                <button class="add-to-cart" onclick="addToCart('Item 1', 100.00)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="item" id="item2">
+            <img src="C:\Users\Admin\OneDrive\Desktop\javascript\practice\addtocart\images\png-transparent-kfc-bucket-of-fried-chicken-kfc-crispy-fried-chicken-chicken-fingers-kentucky-fried-chicken-popcorn-chicken-vegetarian-cuisine-kfc-food-chicken-meat-cuisine-thumbnail.png" alt="Item 2">
+            <div class="details">
+                <h3>Item 2</h3>
+                <p class="price">₹150.00</p>
+                <button class="add-to-cart" onclick="addToCart('Item 2', 150.00)">Add to Cart</button>
+            </div>
+        </div>
+
+        <div class="cart">
+            <h3>Shopping Cart</h3>
+            <ul id="cartItems">
+                <!-- Cart items will be dynamically added here -->
+            </ul>
+            <div class="total" id="cartTotal">
+                Total: ₹0.00
+            </div>
+        </div>
+
+        <!-- Slide-in total amount notification -->
+        <div class="notification" id="totalNotification"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

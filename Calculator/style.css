@@ -1,0 +1,156 @@
+:root {
+  --bg-light: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  --text-light: white;
+  --text-dark: #f0f0f0;
+}
+
+/* Theme-Based Button Styles */
+.theme-style1 {
+  --calc-bg: rgba(255, 255, 255, 0.1);
+  --btn-bg: rgba(255, 255, 255, 0.08);
+}
+.theme-style2 {
+  --calc-bg: rgba(109, 213, 237, 0.1);
+  --btn-bg: rgba(109, 213, 237, 0.15);
+}
+.theme-style3 {
+  --calc-bg: rgba(44, 83, 100, 0.15);
+  --btn-bg: rgba(44, 83, 100, 0.2);
+}
+.theme-style4 {
+  --calc-bg: rgba(255, 255, 255, 0.12);
+  --btn-bg: rgba(255, 255, 255, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg-light);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.5s ease;
+}
+
+/* Background animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.theme-controls {
+  margin-bottom: 20px;
+  color: white;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.theme-controls label {
+  cursor: pointer;
+}
+.theme-controls select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+}
+
+/* Calculator Container */
+.calculator {
+  background: var(--calc-bg);
+  border-radius: 20px;
+  padding: 20px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  width: 320px;
+  max-width: 90%;
+  transition: background 0.3s ease;
+}
+
+/* Display */
+.display {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 2rem;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: right;
+  margin-bottom: 20px;
+  min-height: 60px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Buttons */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.button {
+  padding: 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 12px;
+  background: var(--btn-bg);
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  font-weight: 500;
+  backdrop-filter: blur(10px);
+}
+.button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.button.operator {
+  background-color: rgba(255, 140, 0, 0.3);
+}
+.button.equal {
+  background-color: rgba(50, 205, 50, 0.3);
+  grid-column: span 2;
+}
+.button.clear {
+  background-color: rgba(255, 68, 68, 0.3);
+  grid-column: span 2;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: #121212;
+}
+body.dark-mode .display,
+body.dark-mode .calculator {
+  background: rgba(255, 255, 255, 0.08);
+}
+body.dark-mode .button {
+  color: var(--text-dark);
+  background: rgba(255, 255, 255, 0.05);
+}
+body.dark-mode .button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 400px) {
+  .display {
+    font-size: 1.5rem;
+  }
+  .button {
+    padding: 16px;
+    font-size: 1rem;
+  }
+}

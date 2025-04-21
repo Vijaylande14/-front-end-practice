@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: background 0.3s ease;
+  }
+  
+  body.dark {
+    background: #121212;
+  }
+  
+  .container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  body.dark .container {
+    background: #1e1e1e;
+    color: #fff;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  body.dark h2 {
+    color: #fff;
+  }
+  
+  .theme-toggle {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .input-section {
+    display: flex;
+    gap: 10px;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #1a5edb;
+  }
+  
+  ul {
+    list-style: none;
+    margin-top: 20px;
+    padding-left: 0;
+  }
+  
+  li {
+    background: #f1f1f1;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+  }
+  
+  body.dark li {
+    background: #333;
+    color: #fff;
+  }
+  
+  li.done {
+    text-decoration: line-through;
+    color: #999;
+  }
+  
+  .actions button {
+    margin-left: 8px;
+    background: #ff6b6b;
+  }
+  
+  .actions button.done-btn {
+    background: #28a745;
+  }
+  
+  @media (max-width: 500px) {
+    .input-section {
+      flex-direction: column;
+    }
+  
+    button {
+      width: 100%;
+    }
+  }
+  

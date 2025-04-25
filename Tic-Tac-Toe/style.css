@@ -1,0 +1,102 @@
+:root {
+    --primary-color: #2c3e50;
+    --accent-color: #3498db;
+    --win-color: #2ecc71;
+    --draw-color: #e67e22;
+    --bg-color: #ecf0f1;
+    --cell-size: 100px;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #9face6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 30px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px #ccc;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  #gameBoard {
+    display: grid;
+    grid-template-columns: repeat(3, var(--cell-size));
+    grid-template-rows: repeat(3, var(--cell-size));
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    background-color: var(--bg-color);
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+  }
+  
+  .cell:hover {
+    background-color: #d0dfff;
+    transform: scale(1.05);
+  }
+  
+  .cell.win {
+    background-color: var(--win-color);
+    color: white;
+  }
+  
+  #statusText {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  @media (max-width: 400px) {
+    :root {
+      --cell-size: 70px;
+    }
+  }
+  

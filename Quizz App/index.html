@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Application</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Start Page -->
+<div class="container" id="startPage">
+  <h2>Welcome to the Quiz</h2>
+  <input type="text" id="userName" placeholder="Enter your name" required>
+  <button id="startButton" onclick="startQuiz()">Start Test</button>
+</div>
+
+<!-- Quiz Page -->
+<div class="container hidden" id="quizPage">
+  <h2 id="quizTitle">Quiz</h2>
+  <div id="timer" class="timer">Time left: 2:00</div>
+  <form id="quizForm">
+    <!-- Question will appear here -->
+    <button id="nextButton" type="button" onclick="nextQuestion()">Next Question</button>
+  </form>
+  <div id="validationError">Please select an answer before moving to the next question!</div>
+</div>
+
+<!-- Result Page -->
+<div class="container hidden" id="resultPage">
+  <h2>Result</h2>
+  <p id="resultMessage" class="result-message"></p>
+  <p id="finalScore"></p>
+  <div id="celebrationMessage" class="result-celebration"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

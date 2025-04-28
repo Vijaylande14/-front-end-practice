@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tip Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator">
+    <h2>Tip Calculator</h2>
+    <label>Bill Amount: ₹</label>
+    <input type="number" id="bill" placeholder="Enter bill amount">
+    
+    <label>Tip Percentage: %</label>
+    <input type="number" id="tip" placeholder="Enter tip %" value="10">
+    
+    <label>Number of People:</label>
+    <input type="number" id="people" placeholder="Enter people count" value="1">
+
+    <button onclick="calculateTip()">Calculate</button>
+
+    <div class="result">
+      <p>Tip per Person: ₹<span id="tip-per-person">0.00</span></p>
+      <p>Total per Person: ₹<span id="total-per-person">0.00</span></p>
+    </div><!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>Tip Calculator</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Bootstrap 5 CDN -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <div class="glass-card text-center">
+        <h2>💸 Tip Calculator</h2>
+        
+        <div class="form-group">
+          <label>Bill Amount (₹):</label>
+          <input type="number" class="form-control" id="bill" placeholder="Enter bill amount">
+        </div>
+    
+        <div class="form-group">
+          <label>Tip Percentage (%):</label>
+          <input type="number" class="form-control" id="tip" value="10">
+        </div>
+    
+        <div class="form-group">
+          <label>Number of People:</label>
+          <input type="number" class="form-control" id="people" value="1">
+        </div>
+    
+        <button class="btn btn-light w-100 mt-3" onclick="calculateTip()">Calculate Tip</button>
+    
+        <div class="result mt-4">
+          <p>Tip per Person: ₹ <span id="tip-per-person">0.00</span></p>
+          <p>Total per Person: ₹ <span id="total-per-person">0.00</span></p>
+        </div>
+      </div>
+    
+      <script src="script.js"></script>
+    </body>
+    </html>
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,58 +1,43 @@
 body {
-    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-  }
-  
-  .glass-card {
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 16px;
-    padding: 30px;
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.2);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    color: #fff;
-    max-width: 400px;
-    width: 100%;
-  }
-  
-  .glass-card h2 {
-    font-weight: bold;
-    margin-bottom: 25px;
-  }
-  
-  label {
-    margin-top: 10px;
-    color: #f1f1f1;
-    font-weight: 500;
-  }
-  
-  input.form-control {
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: none;
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
-  }
-  
-  button {
-    border-radius: 30px;
-    font-weight: bold;
-    padding: 12px;
-  }
-  
-  .result {
-    margin-top: 25px;
-    font-size: 1.1rem;
-  }
-  
-  .result span {
-    font-weight: bold;
-    color: #fff;
-  }
-  
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+}
+
+.calculator-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+.btn {
+  font-size: 1.1em;
+  padding: 10px;
+}
+
+.result p {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.result {
+  margin-top: 20px;
+}
+
+.text-center {
+  text-align: center;
+}

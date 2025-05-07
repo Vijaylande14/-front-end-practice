@@ -1,20 +1,21 @@
 function calculateTip() {
-    const bill = parseFloat(document.getElementById('bill').value);
-    const tipPercent = parseFloat(document.getElementById('tip').value);
-    const people = parseInt(document.getElementById('people').value);
-  
-    if (isNaN(bill) || isNaN(tipPercent) || isNaN(people) || people <= 0) {
-      alert("Please enter valid values!");
-      return;
-    }
-  
-    const tipTotal = (bill * tipPercent) / 100;
-    const total = bill + tipTotal;
-  
-    const tipPerPerson = tipTotal / people;
-    const totalPerPerson = total / people;
-  
-    document.getElementById('tip-per-person').textContent = tipPerPerson.toFixed(2);
-    document.getElementById('total-per-person').textContent = totalPerPerson.toFixed(2);
+  // Get input values
+  const billAmount = parseFloat(document.getElementById("bill").value);
+  const tipPercentage = parseFloat(document.getElementById("tip").value);
+  const numberOfPeople = parseInt(document.getElementById("people").value);
+
+  // Validation checks for inputs
+  if (isNaN(billAmount) || isNaN(tipPercentage) || isNaN(numberOfPeople) || billAmount <= 0 || tipPercentage <= 0 || numberOfPeople <= 0) {
+    alert("Please enter valid values for all fields.");
+    return;
   }
-  
+
+  // Calculate the tip and total
+  const totalTip = (billAmount * tipPercentage) / 100;
+  const tipPerPerson = (totalTip / numberOfPeople).toFixed(2);
+  const totalPerPerson = ((billAmount + totalTip) / numberOfPeople).toFixed(2);
+
+  // Display results
+  document.getElementById("tip-per-person").textContent = tipPerPerson;
+  document.getElementById("total-per-person").textContent = totalPerPerson;
+}

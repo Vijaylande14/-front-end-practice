@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Digital Calendar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="calendar">
+  <h2 id="monthYear"></h2>
+  <div class="date" id="currentDate"></div>
+  <table>
+    <thead>
+      <tr>
+        <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+      </tr>
+    </thead>
+    <tbody id="calendarBody">
+    </tbody>
+  </table>
+  <div class="nav-buttons">
+    <button onclick="changeMonth(-1)">Prev</button>
+    <button onclick="changeMonth(1)">Next</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

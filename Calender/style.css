@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #74ebd5 0%, #acb6e5 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .calendar {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+    width: 320px;
+    text-align: center;
+  }
+  
+  .calendar h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .calendar .date {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #666;
+  }
+  
+  table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    width: 14.2%;
+    padding: 10px 0;
+    color: #333;
+  }
+  
+  th {
+    color: #555;
+  }
+  
+  td {
+    cursor: pointer;
+  }
+  
+  td:hover {
+    background: #e0e0e0;
+    border-radius: 5px;
+  }
+  
+  .today {
+    background: #74ebd5;
+    border-radius: 50%;
+    color: #fff;
+  }
+  
+  .nav-buttons {
+    margin-top: 10px;
+  }
+  
+  .nav-buttons button {
+    padding: 5px 10px;
+    background-color: #74ebd5;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .nav-buttons button:hover {
+    background-color: #5bb7b7;
+  }
+  

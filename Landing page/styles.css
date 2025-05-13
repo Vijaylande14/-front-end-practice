@@ -2,27 +2,36 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 body, html {
   font-family: 'Segoe UI', sans-serif;
+  height: 100%;
 }
 
-/* Navigation Bar */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1600&q=80')
+    no-repeat center center/cover;
+  position: relative;
+  color: white;
+}
+
 nav {
-  background-color: #fff;
-  padding: 15px 30px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: sticky;
+  padding: 20px 50px;
+  position: absolute;
   top: 0;
-  z-index: 999;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 10;
 }
 
-nav .logo {
+.logo {
   font-size: 1.7rem;
   font-weight: bold;
   color: #ff6a00;
@@ -36,7 +45,7 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #333;
+  color: #fff;
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -45,48 +54,38 @@ nav ul li a:hover {
   color: #ff6a00;
 }
 
-/* Hero Section */
-.hero {
-  height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1600&q=80')
-    no-repeat center center/cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-  padding: 0 20px;
-}
-
-.hero h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+.hero-content {
+  position: absolute;
+  bottom: 120px;
+  left: 50px;
   max-width: 600px;
 }
 
-.hero button {
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content .button {
   background-color: #ff6a00;
   color: white;
   border: none;
-  padding: 14px 30px;
+  padding: 12px 25px;
   font-size: 1rem;
   border-radius: 5px;
   cursor: pointer;
   transition: background 0.3s;
 }
 
-.hero button:hover {
+.hero-content .button:hover {
   background-color: #e65a00;
 }
 
-/* Footer */
 footer {
   background-color: #222;
   color: #ccc;
@@ -95,22 +94,28 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-  nav ul {
+  nav {
     flex-direction: column;
     gap: 10px;
+    padding: 15px;
   }
 
-  .hero h1 {
-    font-size: 2.2rem;
+  .hero-content {
+    left: 20px;
+    right: 20px;
+    bottom: 100px;
   }
 
-  .hero p {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
     font-size: 1rem;
   }
 
-  .hero button {
-    padding: 12px 24px;
+  .hero-content .button {
+    padding: 10px 20px;
   }
 }

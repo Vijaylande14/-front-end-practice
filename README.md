@@ -6,6 +6,6 @@ This is a simple front-end project designed for beginners to practice HTML, CSS,
 ## Project Overview
 
 This project demonstrates the use of:
-- HTML for structuring the web page.
-- CSS for styling the page and layout.
-- JavaScript for adding basic interactivity.
+- **HTML** for structuring the web page.
+- **CSS** for styling the page and layout.
+- **JavaScript** for adding basic interactivity.
